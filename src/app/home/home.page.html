@@ -7,8 +7,11 @@
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <button ion-button (click) = "clicked()">Get Data</button>
+  <ion-list>
+    <ion-item *ngFor="let item of result">
+      <ion-icon slot="start"></ion-icon>
+      <p >{{item.id}} - {{item.title}}</p>
+    </ion-item>
+  </ion-list>
 </ion-content>
